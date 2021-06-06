@@ -1,0 +1,19 @@
+.dropdown {
+  width: 350px;
+  margin-top: 2rem;
+
+  .dropdown-description {
+    width: inherit;
+    border: 1px solid #dadce0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    border-radius: 3px;
+
+    p {
+      color: #80868b;
+    }
+  }
+}

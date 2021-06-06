@@ -1,0 +1,35 @@
+.inputfield {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .inputfield-form {
+    position: relative;
+    width: 350px;
+
+    input {
+      border: 1px solid #dadce0;
+      padding: 12px;
+      border-radius: 3px;
+      width: 100%;
+      box-shadow: none;
+      outline: none;
+      color: #000;
+
+      &:focus ~ span {
+        top: -10px;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: 13px;
+      left: 12px;
+      color: #80868b;
+      font-weight: 400;
+      z-index: 1;
+      background: #fff;
+      transition: ease-in-out 0.2s all;
+    }
+  }
+}
