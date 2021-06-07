@@ -1,6 +1,7 @@
 import InputField from '../InputField/InputField';
 import DropdDown from '../DropDown/DropDown';
 import Password from '../Password/Password';
+import { Formik } from 'formik';
 import './SignUp.scss';
 
 const SignUp = () => {
@@ -14,16 +15,22 @@ const SignUp = () => {
           </p>
         </div>
 
-        <div className='form-container'>
-          <form id='form'>
-            <InputField />
-            <DropdDown />
-            <Password />
-            <div className='form-button'>
-              <button type='submit'>Next</button>
-            </div>
-          </form>
-        </div>
+        <Formik>
+          {(formik) => {
+            return (
+              <div className='form-container'>
+                <form id='form' onSubmit={formik.handleSubmit}>
+                  <InputField />
+                  <DropdDown />
+                  <Password />
+                  <div className='form-button'>
+                    <button type='submit'>Next</button>
+                  </div>
+                </form>
+              </div>
+            );
+          }}
+        </Formik>
 
         <div className='terms'>
           <small>
