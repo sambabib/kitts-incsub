@@ -28,10 +28,19 @@
         padding: 10px;
         font-size: 10px;
         font-weight: 600;
-        color: #80868b;
         border: 1px solid #efefef;
         border-radius: 3px;
         cursor: pointer;
+      }
+
+      .active {
+        background: #286efa;
+        color: #fff;
+      }
+
+      .inactive {
+        color: #80868b;
+        pointer-events: none;
       }
     }
 

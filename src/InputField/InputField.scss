@@ -19,10 +19,6 @@
       &:focus ~ span {
         top: -10px;
       }
-
-      &:not(:focus):valid ~ span {
-        top: -10px;
-      }
     }
 
     span {
@@ -35,6 +31,8 @@
       background: #fff;
       transition: ease-in-out 0.2s all;
     }
+
+    
   }
 
   .errors {
@@ -43,6 +41,11 @@
 
   .textfield {
     border: 1px solid red !important;
+
+    &:not(:focus) ~ span {
+      top: -10px;
+      background: #fff;
+    }
   }
 
   .textfield ~ span {

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import InputField from '../InputField/InputField';
 import DropdDown from '../DropDown/DropDown';
 import Password from '../Password/Password';
@@ -5,6 +6,45 @@ import { Formik } from 'formik';
 import './SignUp.scss';
 
 const SignUp = () => {
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [description, setDescription] = useState([
+    {
+      id: 0,
+      title: 'Developer',
+      selected: false,
+      key: 'desc',
+    },
+    {
+      id: 1,
+      title: 'Designer',
+      selected: false,
+      key: 'desc',
+    },
+    {
+      id: 2,
+      title: 'Product Manager',
+      selected: false,
+      key: 'desc',
+    },
+  ]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('form has been submitted');
+  };
+
+  const activateButton = () => {
+    let inputName = document.querySelector('#name');
+    let inputEmail = document.querySelector('#email');
+    let inputPassword = document.querySelector('#password');
+    if ((inputName || inputEmail || inputPassword).value === '') {
+      console.log('button is disabled');
+    } else {
+      setIsDisabled(!isDisabled);
+      console.log('button is enabled');
+    }
+  };
+
   return (
     <div className='signup'>
       <div className='left-side'>
@@ -19,12 +59,21 @@ const SignUp = () => {
           {(formik) => {
             return (
               <div className='form-container'>
-                <form id='form' onSubmit={formik.handleSubmit}>
+                <form id='form' onChange={activateButton}>
                   <InputField />
-                  <DropdDown />
+                  <DropdDown
+                    title='I would describe my user type as'
+                    list={description}
+                  />
                   <Password />
                   <div className='form-button'>
-                    <button type='submit'>Next</button>
+                    <button
+                      type='button'
+                      onClick={handleSubmit}
+                      className={`${isDisabled ? 'active' : 'inactive'}`}
+                    >
+                      Next
+                    </button>
                   </div>
                 </form>
               </div>
