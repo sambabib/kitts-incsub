@@ -1,0 +1,46 @@
+Q1. What would you use to make an app/site pass WAI test?
+
+Accessibility refers to designing web pages such that they are accessible to all users, including those with visual, physical, auditory, cognitive, or other disabilities. 
+To make an app/website pass the WAI test, the progressive enhancement which simply means designing web pages in layers so basic content and interaction of the web page/app is accessible to all. 
+Since these options are available as features of web browsers, devices that allow access to your app/site increase.
+
+Some of the things taken into consideration are; semantic markup, unobstrusive style sheets and unobstructive javascript. Because majority of user interation is through forms, it is imperative that these forms be designed for accessibility. The use of the html label tag is a good place to start, as this helps people with vision problems have good access to your app/page. 
+The four principles that will help your app/website pass a WAI test are as follows;
+
+1. Perceivable: The UI and information on the page must be presented in such a way that users can perceive.
+2. Operable: UI components and navigation must be operable.
+3. Understandable: Information on the app/page UI must be clearly undestandable.
+4. Robust: Content on the app/page must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technology.
+
+Q2. Which processes would you use to optimize a React App for speed and performance?
+
+There are various methods employed for the optimization of react apps, I will list a number of these processes below.
+
+1. Using Pure Components: using pure components help reduce Re-rendering.
+2. Use of Arrow Functions vs Binding in Constructors: Arrow functions preserve the context of execution.
+3. Avoid using Inline function definition: using inline function will call a new instance of the function on every render, this affects performance.
+4. Use Immutable data stuctures for components: State and props should be immutable for components to work consistently.
+5. Use React.memo for component memorization.
+6. Lazy Loading of React components: Loading components when required improves speed and performance.
+7. Use of React Hooks and functional programming.
+8. Use React fragments to avoid the need for an extra tag.
+9. Optimize conditional rendering: Using conditional rendering should be reduced for better performance. example; rendering with if/else statements.
+10. Use unique key for iteration.
+
+Q3. What was the most significant project you ever worked on with React? What was your job/role? Describe what tools and app architecture was used on that project.
+If possible, share a public repo where we can check.
+
+The most significant project I have worked on was at my last job I worked as a fullstack developer building the version 3 of an ERP software for 
+small and medium sized businesses using React on the frontend and Node.js on the backend. I used frontend libraries such as 
+Ant design to build and populate react components with ant design components such as (date picker, select, dropdown menus, forms etc),
+also used charting libraries on the frontend like recharts and charts.js to build charting components like (bar charts, pie charts, line charts),
+Redux for state management because the application was pretty large.
+React router to navigate between pages.  
+
+On the backend, I used Node.js and Express.js to build and test RESTful APIs, Sequelize as an ORM to manipulate a MySQL database.
+
+The App architecture used on this project was the microservices architecture, the app (pretty large) was broken down into smaller components,
+each component having its own logic. The structure put in place was that so the standaolone components were independent of each other so as 
+to ensure they are easy to scale without requiring heavy infrastructure. 
+
+Unfortunately, I do not have access to the repository as I no longer work with them.  

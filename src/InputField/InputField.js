@@ -4,7 +4,7 @@ import './InputField.scss';
 
 
 const InputField = () => {
-  return (
+   return (
     <Formik
       initialValues={{
         name: '',
@@ -32,7 +32,7 @@ const InputField = () => {
                 {formik.touched.name && formik.errors.name ? (
                   <div className='errors'>{formik.errors.name}</div>
                 ) : null}
-                <span className='placehloder'>Your name</span>
+                <span className='placeholder'>Your name</span>
               </label>
               {console.log(formik.values)}
             </div>

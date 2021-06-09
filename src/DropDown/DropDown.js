@@ -17,8 +17,7 @@ const DropDown = ({ title, list }) => {
   };
 
   const selectItem = (item) => {
-    const { title, id, key } = item;
-
+    const { title } = item;
     setState({
       isListOpen: false,
       dropdownTitle: title,

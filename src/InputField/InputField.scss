@@ -16,7 +16,11 @@
       outline: none;
       color: #000;
 
-      &:focus ~ span {
+      &:focus ~ .placeholder {
+        top: -10px;
+      }
+
+      &:not(:focus):valid ~ .placeholder {
         top: -10px;
       }
     }
@@ -31,8 +35,6 @@
       background: #fff;
       transition: ease-in-out 0.2s all;
     }
-
-    
   }
 
   .errors {
